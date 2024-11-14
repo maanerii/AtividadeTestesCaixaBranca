@@ -5,11 +5,13 @@ Problema: Could not find or load main class User.
 
 Explicação: O código fornecido não possue uma classe Main.
 
+
 - 2 Erro = Uso de "com.mysql.jdbc.Driver" (Linha 12)
   
 Problema: A classe `com.mysql.jdbc.Driver` está desatualizada, e o método newInstance(), está antiquado.
 
 Explicação: Desde a versão do Java 9, o método newInstace() não é mais utilizado.
+
 
 - 3 Erro = Exposição de Credenciais no Código (Linha 12-14)
   
@@ -18,11 +20,13 @@ Problema: A URL de conexão inclui credenciais (`user=lopes&password=123`) diret
 Explicação: A URL não está exatamente errada, porém, é uma forma ultrapassada de fazer a conexão com o banco de dados. O username e password são passados como parâmetros separados ao método getConnection(), o que melhora a segurança e separação de responsabilidades.
 
 
+
 - 4 Erro = (Linhas 16 e 28)
   
 Problema: Consulta resultando em SQLException e depois não trata a exceção
 
 Explicação: A query tenta buscar uma coluna chamada "none", porém esta coluna é inexistente.
+
   
 - 5 Erro = Manuseio Inadequado de Exceções (Linhas 14 e 30)
   
@@ -30,11 +34,13 @@ Problema: Os blocos `catch` capturam exceções, mas não as registram ou as exi
 
 Explicação: Adicione um `e.printStackTrace();` ou registre a exceção usando um logger para facilitar a identificação de erros.
 
+
 - 6 Erro: Linha 29.
   
 Problema: Consulta possui espaços extras.
 
 Explicação: A cosulta sql += "where login = " + " ' " + login + " ' "; possui espaços extras dentro das aspas simples, o que pode resultar em uma consulta inválida resultando em um SQLException.
+
 
 - 7 Erro = Linha 30:
 

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class login {
+public class User {
     public Connection conectarBD() {
         Connection conn = null;
         try {

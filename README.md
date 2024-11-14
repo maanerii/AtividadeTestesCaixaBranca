@@ -18,7 +18,7 @@ Problema: A URL de conexão inclui credenciais (`user=lopes&password=123`) diret
 Explicação: A URL não está exatamente errada, porém, é uma forma ultrapassada de fazer a conexão com o banco de dados. O username e password são passados como parâmetros separados ao método getConnection(), o que melhora a segurança e separação de responsabilidades.
 
 
-- 4 Erro = (Linhas 28)
+- 4 Erro = (Linhas 16 e 28)
   
 Problema: Consulta resultando em SQLException e depois não trata a exceção
 

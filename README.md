@@ -30,11 +30,17 @@ Problema: Os blocos `catch` capturam exceções, mas não as registram ou as exi
 
 Explicação: Adicione um `e.printStackTrace();` ou registre a exceção usando um logger para facilitar a identificação de erros.
 
-- 6 Erro = Consulta possui espaços extras (Linha 29)
+- 6 Erro: Linha 29.
   
-Problema: A consulta SQL concatenada na linha 29 possui espaços extras dentro das aspas simples. A forma de concatenar as strings resulta em uma consulta inválida ou mal formatada, o que pode causar um SQLException ao tentar executá-la.
+Problema: Consulta possui espaços extras.
 
-Explicação: A inclusão de espaços dentro das aspas simples para os valores de login e senha não só afeta a sintaxe da consulta, como também pode tornar o código mais suscetível a erros de formatação.
+Explicação: A cosulta sql += "where login = " + " ' " + login + " ' "; possui espaços extras dentro das aspas simples, o que pode resultar em uma consulta inválida resultando em um SQLException.
+
+- 7 Erro = Linha 30:
+
+Problema: Consulta possui espaços extras.
+
+Explicação: A cosulta sql += " and senha = " + " ' " + senha + " '; "; possui espaços extras dentro das aspas simples, o que pode resultar em uma consulta inválida resultando em um SQLException.
 
 
 
@@ -50,8 +56,4 @@ Problema: O código não fecha os recursos (`Connection`, `Statement`, `ResultSe
 
 Explicação: Use o bloco `try-with-resources` para garantir que os recursos sejam fechados automaticamente:
 
-10 - Inicialização da Variável nome e result` (Linhas 17–18)
 
-Problema: As variáveis `nome` e `result` são declaradas como variáveis de instância, mas poderiam ser variáveis locais dentro do método `verificarUsuario` para evitar possíveis problemas de concorrência em um ambiente multithread.
-
-Explicação: Declare `nome` e `result` dentro do método `verificarUsuario`.

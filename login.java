@@ -1,4 +1,3 @@
-
 package login;
 
 import java.sql.Connection;
@@ -10,10 +9,12 @@ public class login {
     public Connection conectarBD() {
         Connection conn = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("com.mysql.Driver.Manager").newInstance();
             String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
             conn = DriverManager.getConnection(url);
-        } catch (Exception e) { }
+        } 
+        catch (Exception e) {
+        }
         return conn;
     }
 
@@ -23,10 +24,10 @@ public class login {
     public boolean verificarUsuario(String login, String senha) {
         String sql = "";
         Connection conn = conectarBD();
-        // INSTRUÇÃO SQL
-        sql += "select nome from usuarios ";
-        sql += "where login = '" + login + "'";
-        sql += " and senha = '" + senha + "';";
+        // INSTRUCAO SQL
+        sql += "select none from usuarios ";
+        sql += "where login = " + " ' " + login + " ' ";
+        sql += " and senha = " + " ' " + senha + " '; ";
         try {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
@@ -34,8 +35,9 @@ public class login {
                 result = true;
                 nome = rs.getString("nome");
             }
-        } catch (Exception e) { }
+        } 
+        catch (Exception e) {
+        }
         return result;
     }
-}
-// fim da classe
+} // fim da class

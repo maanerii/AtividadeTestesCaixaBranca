@@ -1,4 +1,5 @@
 ### ETAPA 1 - Aponte os erros que podem conter no código e crie um Readme explicando os erros encontrados.
+// O Arquivo login.java é o código incorreto fornecido para a atividade.
 - 1 Erro = Ocorre porque o código fornecido não acha o User (Linha 8)
   
 Problema: Could not find or load main class User.
@@ -62,4 +63,4 @@ Problema: O código não fecha os recursos (`Connection`, `Statement`, `ResultSe
 
 Explicação: Use o bloco `try-with-resources` para garantir que os recursos sejam fechados automaticamente:
 
-
+// Após corrigir tudo, o novo código está no Arquivo User.java

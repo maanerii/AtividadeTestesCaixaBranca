@@ -57,11 +57,6 @@ Problema: O bloco catch no código não trata exceções corretamente, o que pod
 
 Explicação: O uso de concatenação de strings para montar consultas SQL é uma prática insegura, pois permite que um usuário mal-intencionado insira comandos SQL maliciosos. Além disso, a falta de tratamento adequado das exceções impede que erros sejam registrados ou tratados corretamente, dificultando a identificação de problemas.
 
-### ETAPA 2 - ARQUIVO DO PLANO DE TESTE DE CAIXA BRANCA NO REPOSITÓRIO.
-Arquivo do Plano de Teste já foi realizado e publico na Branch: Main
-
-### ETAPA 03 - GRAFO DE FLUXO, COMPLEXIDADE CICLOMÁTICA E BASE DE CAMINHO
-
 - 9 Erro = Fechamento de Recursos (Linhas 27–30)
   
 Problema: O código não fecha os recursos (`Connection`, `Statement`, `ResultSet`), o que pode levar a vazamentos de memória.
@@ -69,3 +64,10 @@ Problema: O código não fecha os recursos (`Connection`, `Statement`, `ResultSe
 Explicação: Use o bloco `try-with-resources` para garantir que os recursos sejam fechados automaticamente:
 
 // Após corrigir tudo, o novo código está no Arquivo User.java
+
+### ETAPA 2 - ARQUIVO DO PLANO DE TESTE DE CAIXA BRANCA NO REPOSITÓRIO.
+Arquivo do Plano de Teste já foi realizado e publico na Branch: Main
+
+### ETAPA 03 - GRAFO DE FLUXO, COMPLEXIDADE CICLOMÁTICA E BASE DE CAMINHO
+
+

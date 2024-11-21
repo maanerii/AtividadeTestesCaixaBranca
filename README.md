@@ -5,10 +5,10 @@ ETAPA 3
 No repositório "Etapa 3 - Grafo de FLUXO.png"
 
 ### Complexidade ciclomática
-- Fórmula da Complexidade Ciclomática: M = E - N + 2P
+- Fórmula: M = E - N + 2P
 
 
-- Cálculo da Complexidade Ciclomática:
+- Cálculo:
 
 Total de Nós = 17; Total de Arestas = 16; Total de Componentes Conectados = 1
 

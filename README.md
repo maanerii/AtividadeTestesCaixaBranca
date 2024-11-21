@@ -2,7 +2,7 @@
 ETAPA 3
 
 ### ETAPA 03 - GRAFO DE FLUXO DO CÓDIGO.
-link
+No repositório "Etapa 3 - Grafo de FLUXO.png"
 
 ### Complexidade ciclomática
 - Fórmula da Complexidade Ciclomática: M = E - N + 2P

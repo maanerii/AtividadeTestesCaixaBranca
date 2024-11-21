@@ -5,10 +5,10 @@ ETAPA 3
 link
 
 ### Complexidade ciclomática
-Fórmula da Complexidade Ciclomática: M = E - N + 2P
+- Fórmula da Complexidade Ciclomática: M = E - N + 2P
 
 
-Cálculo da Complexidade Ciclomática:
+- Cálculo da Complexidade Ciclomática:
 
 Total de Nós = 17
 
@@ -17,7 +17,7 @@ Total de Arestas = 16
 Total de Componentes Conectados = 1
 
 
-Substituindo os valores na fórmula:
+- Substituindo os valores na fórmula:
 
 M = 16 - 17 + 2.1
 

@@ -1,5 +1,5 @@
 # AtividadeTestesCaixaBranca
-## ETAPA 4
+## ETAPA 4 - para achar o JavaDoc, entre em "Javadoc", "dist/javadoc" e "index.html".
 
 - Login System - Java Project
 

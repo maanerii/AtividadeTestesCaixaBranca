@@ -1,5 +1,5 @@
 ### ETAPA 1 - Aponte os erros que podem conter no código e crie um Readme explicando os erros encontrados.
-// O Arquivo login.java é o código incorreto fornecido para a atividade.
+// O Arquivo "user.java" na pasta login é o código incorreto fornecido para a atividade.
 - 1 Erro = Ocorre porque o código fornecido não acha o User (Linha 8)
   
 Problema: Could not find or load main class User.
@@ -68,6 +68,10 @@ Explicação: Use o bloco `try-with-resources` para garantir que os recursos sej
 ### ETAPA 2 - ARQUIVO DO PLANO DE TESTE DE CAIXA BRANCA NO REPOSITÓRIO.
 Arquivo do Plano de Teste já foi realizado e publico na Branch: Main
 
-### ETAPA 03 - GRAFO DE FLUXO, COMPLEXIDADE CICLOMÁTICA E BASE DE CAMINHO
+### ETAPA 03 - GRAFO DE FLUXO, COMPLEXIDADE CICLOMÁTICA E BASE DE CAMINHO.
+Para visualizar entre na Branch: ETAPA 3. Após isso, clique no arquivo para visualizar o Grafo de Fluxo. As outras atividades estão no README.
+
+### ETAPA 04 - JAVADOC
+Para visualizar entre na Branch: ETAPA 4 A atividade estará disponível no corpo do README. Para a visualização do JAVADOC, acesse a pasta javadoc, dist/javadoc e encontre o arquivo index.html.
 
 

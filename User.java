@@ -1,39 +1,43 @@
-// código arrumado
 package login;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class User {
-    public Connection conectarBD () {
+    public Connection conectarBD() {
         Connection conn = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            Class.forName("com.mysql.Driver.Manager").newInstance();
             String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
             conn = DriverManager.getConnection(url);
-        }catch (Exception e) { }
-        return conn; }
+        } 
+        catch (Exception e) {
+        }
+        return conn;
+    }
 
-    public String nome="";
+    public String nome = "";
     public boolean result = false;
+
     public boolean verificarUsuario(String login, String senha) {
-        String sql = "SELECT nome FROM usuarios WHERE login = ? AND senha = ?";
-        try (Connection conn = conectarBD();
-            PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setString(1, login);
-            st.setString(2, senha);
-            try (ResultSet rs = st.executeQuery()) {
-                if (rs.next()) {
-                    result = true;
-                    nome = rs.getString("nome");
-                }
+        String sql = "";
+        Connection conn = conectarBD();
+        // INSTRUCAO SQL
+        sql += "select none from usuarios ";
+        sql += "where login = " + " ' " + login + " ' ";
+        sql += " and senha = " + " ' " + senha + " '; ";
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                result = true;
+                nome = rs.getString("nome");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } 
+        catch (Exception e) {
         }
         return result;
     }
-}
- //fim da class
+} // fim da class
